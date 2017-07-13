@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<script src="jquery-3.2.1.min.js"></script>
+		<script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js "></script>
+		<style>
+			div{
+				overflow: scroll;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="jumbotron">
+			<h1>Documentation for Relevance Checking Tool</h1>
+			<p>The objective of this project is to extract the search results from the search page and then evaluate the quality of the search results</p>
+		</div>
+		</body>
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+			<dir class="container">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">Hortonworks</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li ><a href="#FlowDiagram">Flow Diagram</a></li>
+					<li ><a href="#SoftwareRequirement">Software Requirements</a></li>
+					<li><a href="#Troubleshoot">Troubleshooting</a></li>
+					<li><a href="#userInstructions">User Instructions</a></li>
+					<li><a href="#designspec">Design Specifications</a></li>
+				</ul>
+			</dir>
+		</nav>
+		<div class="container">
+			<h2>Flow Diagram</h2>
+			<div id="flowDiagram">
+				<div align="center">
+					<img src="FlowDiagram.png">
+				</div>
+			</div>
+			<h2>Software Requirements</h2>
+			<div id="SoftwareRequirement">
+				<div class="panel-group" id="accordion1">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4>
+								<a href="#python" data-parent="#accordion1" data-toggle="collapse">
+									Python 3
+								</a>
+							</h4>
+						</div>
+						<div id="python" class="panel-collapse collapse">
+							<div class="panel-body">
+								Install Python 3, to run the script. Refer to the following link for installation instructions:<br/>
+								<a href="http://python-guide-pt-br.readthedocs.io/en/latest/starting/installation/" target="_blank">The Hitchhhiker's Guide to Python</a>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4>
+								<a href="#selenium" data-parent="#accordion1" data-toggle="collapse">
+									Selenium
+								</a>
+							</h4>
+						</div>
+						<div id="selenium" class="panel-collapse collapse">
+							<div class="panel-body">
+								Install Selenium, with the help of pip. Pip is the package manager for python.<br/>
+								If pip is not present, refer to the following link<br/>
+								<a href="https://stackoverflow.com/questions/6587507/how-to-install-pip-with-python-3" target="_blank">Install pip with Python 3</a><br/>
+								In mac on successful installation,we shall find a folder within <code> /Library/Frameworks/Python.framework/Versions/3.6/selenium</code><br/>
+								To confirm successfull installation, on the Python interprter, try the following code:<br/>
+								<code> from selenium import webdriver</code>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4>
+								<a href="#firefox" data-parent="#accordion1" data-toggle="collapse">
+									Firefox
+								</a>
+							</h4>
+						</div>
+						<div id="firefox" class="panel-collapse collapse">
+							<div class="panel-body">
+								Refer to <a href="https://support.mozilla.org/en-US/kb/how-download-and-install-firefox-mac" target="_blank">this</a> page for information, related to downloading firefox for your system.
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4>
+								<a href="#geckodriver" data-parent="#accordion1" data-toggle="collapse">
+								GeckoDriver for Firefox
+								</a>
+							</h4>
+						</div>
+						<div id="geckodriver" class="panel-collapse collapse">
+							<div class="panel-body">
+								Intall geckodriver for firefox from their git repository at:<br/>
+								<a href="https://github.com/mozilla/geckodriver/releases" target="_blank">Releases page for the geckodriver by mozilla.</a><br/>
+								For further information, refer to <a href="https://stackoverflow.com/questions/40208051/selenium-using-python-geckodriver-executable-needs-to-be-in-path">this</a> stackoverflow page.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>Troubleshoot</h2>
+			<div id="Troubleshoot">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3>Troubleshooting Information</h3>
+					</div>
+					<div class="panel-body">
+						The <code>debugger.py</code> application allows to run the program in debug mode.<br/>
+						This is done with the help of the additional application that is created once, the application is invoked.<br/><br/>
+						<div class="panel-group" id="accordion2">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4>
+										<a href="#troubleshootfunctions" data-parent="#accordion2" data-toggle="collapse">
+											Troubleshooting Functions
+										</a>
+									</h4>
+								</div>
+								<div id="troubleshootfunctions" class="panel-collapse collapse">
+									<div class="panel-body">
+										When a particular function is put into troubleshoot mode. A new function <code>programNameFunction.py</code> is created. This program uncomments all the degugging lines within the program and adds a python debug after the docstring.
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h4>
+										<a href="#troubleshootprograms" data-parent="#accordion2" data-toggle="collapse">
+											Troubleshooting Programs
+										</a>
+									</h4>
+								</div>
+								<div id="troubleshootprograms" class="panel-collapse collapse">
+									<div class="panel-body">
+										When the whole program is to be put in debug mode, all the debugging code is uncommented and a python debugger is added before the first excecutable statement. This means that the program starts right after the preamble (a comment explaining the purpose of the program) before all the import statements.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel-footer">
+						For information on python debugger refer to <a href="https://pythonconquerstheuniverse.wordpress.com/2009/09/10/debugging-in-python/" target="_blank">this</a> site
+					</div>
+				</div>
+			</div>
+			<h2>
+				User Instructions
+			</h2>
+			<div id="userInstructions">
+				<div class="well well-lg">
+					The user has to input the instructions about how the program is to read the input file containing data about the search results and the points alloted to each result. This is done with the help of a configuration file <code>config.txt</code>. All the input data must be entered in the format mentioned within the confinguration file in a file named <code>input.txt</code><br/>
+					This task can be done easily with the help of the configuration helper program. The details to be filled within the configuration file are:<br/>
+					The categories are:<br/>
+					<ul class="list-group">
+						<li class="list-group-item">Query String</li>
+						<li class="list-group-item">Tab Name</li>
+						<li class="list-group-item">Points Alloted to the tab</li>
+						<br/>
+						<div class="alert alert-warning">
+							If the user wishes to not use the confuguration helper. The user must make sure that the tab name must be followed by the points alloted to that tab within the configuration file.
+						</div>
+						<div class="alert alert-danger">
+							The number of search results must be equal to the number of scores alloted so that there is a unique mapping that takes place:<br/>
+							'result1' , 'result2' ; 5 , 8 for a particular tab. Then, 'result1' has 5 points and 'result2' has 8 points.
+						</div>
+					</ul>
+					Furthermore, each configuration file must contain:<br/>
+					<ul class="list-group">
+						<li class="list-group-item">The type of input file</li>
+						<li class="list-group-item">The number of categories of inputs. A category is defined as component that we expect within a search. These components are the search string to be input to Smart Search and the Tabs from which the results are to be extracted, along with the scores alloted to each result within the tab.</li>
+						<li class="list-group-item"> The delimiter within the same category, for example for differentiating between results of the same tab.</li>
+						<li class="list-group-item"> The delimiter differentiating between the categories.</li>
+						<li class="list-group-item"> The category name [which is the same as the tab name] and the data type, which may be integer or a string.</li>
+					</ul>
+					After filling the configuration file, the data within the input file must match the same order as the data within the configuration file. The order of the categories and the delimiters within and inbetween each category must match that of the configuration file. The next example gives an idea of what the two must look like:<br/>
+					<strong>A sample configuration file:</strong>
+					<pre>
+	text
+	5
+	,
+	;
+	querystring , string
+	knowledge base , integer
+	kb_points ,integer
+	hortonworks jira , string
+	hortonworks_jira_points ,integer
+					</pre>
+					<strong>A sample input file</strong>
+					<pre>
+tez view No records available;  3965, 5816, 5718 , 5793 ; 10, 10 , 10 , 10 ; RMP-8525 ,EAR-6015 ,EAR-5746 , EAR-4933 , BUG-82672 ; 5 , 5 , 5 , 5 , 5
+Ambari not showing "Perform Upgrade"; 5826 , 3965 , 5816 , 5718 , 5793 ; 10, 10, 10, 10, 10 ; RMP-8525 , EAR-6015 , EAR-5746 , EAR-4933 , BUG-82672; 5 , 5 , 5 , 5 , 5
+					</pre>
+					After running the search excecution program, we would obtain an output similar to this:
+					<pre>
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+=========================Time(YYYY/MM/DD):(Hours|Min)-(2017/6/30):(16|33)=====================================================================================
+{
+    "tez view No records available": {
+        "HORTONWORKS JIRA": [
+            25,
+            {
+                "0": 0,
+                "1": 1,
+                "2": 2,
+                "3": 3,
+                "4": 4
+            }
+        ],
+        "KNOWLEDGE BASE": [
+            30,
+            {
+                "0": 1,
+                "1": 2,
+                "2": 3
+            }
+        ]
+    },
+    "Ambari not showing \"Perform Upgrade\"": {
+        "HORTONWORKS JIRA": [
+            0,
+            {}
+        ],
+        "KNOWLEDGE BASE": [
+            20,
+            {
+                "0": 0,
+                "1": 2
+            }
+        ]
+    }
+}
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>				
+					</pre>
+					The array shows how the respective results search position has changed.
+				</div>
+			</div>
+			<h2>
+				Design Specifications
+			</h2>
+			<div id="designspec">
+				<div class="panel-group">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3>Scope</h3>
+						</div>
+						<div class="panel-body">
+							This section describes the detailed structure of the components of the Search Relevance Application. It covers the implementation details and the caveats assoceated within each part of the program.
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3>The Configuration Helper</h3>
+						</div>
+						<div class="panel-body">
+							<h4>Important Variable Descriptions</h4>
+							<ul class="list-group">
+								<li class="list-group-item"><code>allowedInputs</code>: contains the tabs from which data can be extracted. This is necessary to check if the user has put the category within the input file.</li>
+								<li class="list-group-item"><code>matchPoints</code>: is a dictionary that maps the particular tab category with the points category for that tab.</li>
+								<li class="list-group-item"><code>allowedInputs</code>: contains the type of inputs that can be present within the input file, namely numbers and sentences in other words; integers and string respectively</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3>
+								The Data Validator
+							</h3>
+						</div>
+						<div class="panel-body"> 
+							<h4>Important Variable Descriptions</h4>
+							<ul class="list-group">
+								<li class="list-group-item"><code>testTypes</code>: stores all the tabs whose results are to be extracted and evaluated for relevance.</li>
+								<li class="list-group-item"><code>pointValueMap</code>: contains the mapping of a search result to the points alloted to it.</li>
+								<li class="list-group-item"><code>queryList</code>: is a list of all the search queries present within the input file.</li>
+							</ul>
+							<h4>The list of functions</h4>
+							<div class="panel-group" id="accordion3">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4>
+											<a href="#checkTemplate" data-toggle="collapse" data-parent="#accordion3">
+												<code>checkTemplate(template)</code>
+											</a>
+										</h4>
+									</div>
+									<div  id="checkTemplate" class="panel-collapse collapse">
+										<div class="panel-body">
+											This function verifies the validity of the configuration file by finding out if the category lies in the <code>allowedInputs</code> and if the type lies in the <code>allowedTypes</code>.
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4>
+											<a href="#fileRead" data-toggle="collapse" data-parent="#accordion3">
+												<code>fileRead(template,sameCatDelim,diffCatDelim,inputFile)</code>
+											</a>
+										</h4>
+									</div>
+									<div id="fileRead" class="panel-collapse collapse">
+										<ul class="list-group">
+											<li class="list-group-item">The input file is read line by line.</li>
+											<div align="center">
+												<br/>
+												<span class="glyphicon glyphicon-arrow-down"></span>
+												<br/>
+											</div>
+											<li class="list-group-item">The categories are split according to the delimiter's between categories, given by the argument <code>diffCatDelim</code>.</li>
+											<div align="center">
+												<br/>
+												<span class="glyphicon glyphicon-arrow-down"></span>
+												<br/>
+											</div>
+											<li class="list-group-item">Each category is then tested against the <code>template</code> defined by the configuration file. It checks whether the categories in the input file appear in the configuration file. Furthermore, it checks whether, the data types match define those given in the configuration file. In addition it also checks if the number of search values is equal to the number of point scores for that cotegory. Finally, it performs a one-to-one mapping to create a dictionary of the search result and the points attached to it and is stored within <code>pointValueMap.</code> The search queries are stored in a <code>queryList</code>.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3>
+								The Search Executor
+							</h3>
+						</div>
+						<div class="panel-body">
+							<h4>
+								Important Variable Descriptions
+							</h4>
+							<ul class="list-group">
+								<li class="list-group-item"><code>resultSummary</code> it stores all the tabs and the results within the tabs in the form of a tree.</li>
+								<li class="list-group-item"><code>finalOutput</code> it contains the scores and the positions  of the search in the form of a tree.</li>
+							</ul>
+							<h4>
+								The list of Functions
+							</h4>
+							<div class="panel-group" id="accordion4">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4>
+											<a href="#start" data-toggle="collapse" data-parent="#accordion4"><code>start()</code></a>
+										</h4>
+									</div>
+									<div id="start" class="panel-collapse collapse">
+										<div class="panel-body">
+											This function intializes an instance of Firefox and navigates to the Smart Search page. To login into the website, it makes use of a JSON web token which it stores in the form of a cookie. It first goes to the Smart Sense website and then redirects to the Smart Search website.
+											<div class="alert alert-danger">
+												The program makes use of a JSON Web Token of validity of one year. A more effective solution would be to make use of the username and password for the Smart Sense website, into which the Smart Search has been integrated.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4>
+											<a href="#sendQuery" data-toggle="collapse" data-parent="#accordion4"><code>sendQuery(queryString)</code></a>
+										</h4>
+									</div>
+									<div id="sendQuery" class="panel-collapse collapse">
+										<div class="panel-body">
+											This function sends the search query to the Smart Search application.
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4>
+											<a href="#extractData" data-toggle="collapse" data-parent="#accordion4"><code>extractData()</code></a>
+										</h4>
+									</div>
+									<div id="extractData" class="panel-collapse collapse">
+										<div class="panel-body">
+											This funtion searches for the main tabs within the Smart Search Application, after which it traverses throught the tabs one after another. It searches for the tabs wih the help of the function <code>tabsPresent(outerElement)</code> to which we pass the content div. After navigating to a particular tab, it searches to the active div within the html, which it sends to <code>subData()</code> to obtain the contain the data within each subtab or the content of the main tab.
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4>
+											<a href="#subData" data-toggle="collapse" data-parent="#accordion4"><code>subData(typeDiv)</code></a>
+										</h4>
+									</div>
+									<div id="subData" class="panel-collapse collapse">
+										<div class="panel-body">
+											It first finds the number of subtabs with the help of the <code>tabsPresent(outerElement)</code> function, to which we pass the current active div. If subtabs are present it creates a dictionary of the sub tab and the results associated with it; in the following form <code>{subTabName:[listOfRelatedResults]</code>. The results witin each subtab is extracted with the help of the <code>getData(contentDiv)</code> function.  If no subtabs are present, the dictionary created is of the form: <code>{'DEFAULT':[listOfRelatedresults]}</code>.
+											 <div class="alert alert-warning">The function searches for a table from which the data is extracted.</div>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4>
+											<a href="#getData" data-toggle="collapse" data-parent="#accordion4"><code>getData(contentDiv)</code></a>
+										</h4>
+									</div>
+									<div id="getData" class="panel-collapse collapse">
+										<div class="panel-body">
+											This function returns the data present within a sub tab in the form of a list. It searches for a table element within the div and then extracts the headers for the different results obtained.
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4>
+											<a href="#tabsPresent" data-parent="#accordion4" data-toggle="collapse"><code>tabsPresent(outerElement)</code></a>
+										</h4>
+									</div>
+									<div id="tabsPresent" class="panel-collapse collapse">
+										<div class="panel-body">
+											This function searches for an unordered list within the web element passed to it. It then returns a list of web elemets of the 'li' tags. If unordered list is not found it returns <code>None</code>.
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4>
+											<a href="#searchByLayer" data-parent="#accordion4" data-toggle="collapse"><code>searchByLayer(summary,query)</code></a>
+										</h4>
+									</div>
+									<div id="searchByLayer" class="panel-collapse collapse">
+										<div class="panel-body">
+											This function parses through the tree and sends the tabs desired by the user to <code>calculateScore()</code> to find the relevance of the search results.
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4>
+											<a href="#calculateScore" data-parent="accordion4" data-toggle="collapse">
+												<code>calculateScore(listOfResults,resultMap)</code>
+											</a>
+										</h4>
+									</div>
+									<div class="panel-collapse collapse" id="calculateScore">
+										<div class="panel-body">
+											This function calculates the score of each search query by using the mapping created in <code>fileRead()</code>. It also stores the change in the position of the search results within a list containing a dictionary of the format <code>{initialValue:finalValue}</code>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div align="center">
+							<h1>The Tree Structure</h1>
+							<br/>
+							<img src="treeStructure.png" alt="Tree Structure">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
